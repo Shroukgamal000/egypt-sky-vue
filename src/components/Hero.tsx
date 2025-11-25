@@ -15,35 +15,35 @@ export const Hero = ({ selectedCity, onCityChange }: HeroProps) => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8 animate-scale-in">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-accent">Egypt's Most Loved Weather Service</span>
+            <span className="text-sm font-medium text-accent">Trusted by Agriculture, Logistics & Research</span>
           </div>
 
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
-            Beautiful Weather,
+            Professional Weather Intelligence
             <br />
             <span className="bg-gradient-warm bg-clip-text text-transparent">
-              Beautifully Told
+              for Egypt
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-slide-up">
-            Experience weather forecasting reimagined. Get accurate, real-time updates for all major Egyptian cities with a design that feels as good as it looks.
+            Access accurate, real-time meteorological data across all major Egyptian cities. Enterprise-grade forecasting with comprehensive analytics for business-critical decisions.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Button size="lg" className="rounded-full px-8 shadow-2xl hover:shadow-xl transition-all text-lg h-14">
               <CloudSun className="w-5 h-5 mr-2" />
-              Check Weather Now
+              Access Live Data
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
               className="rounded-full px-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 text-lg h-14"
             >
-              Learn More
+              View API Documentation
             </Button>
           </div>
 

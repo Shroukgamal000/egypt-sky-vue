@@ -1,4 +1,4 @@
-import { Cloud, Facebook, Twitter, Instagram, Mail } from "lucide-react";
+import { Cloud, Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -14,48 +14,58 @@ export const Footer = () => {
               <span className="text-xl font-bold text-foreground">WeatherEG</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Beautiful weather forecasting for all of Egypt, crafted with love and care.
+              Professional meteorological intelligence and data infrastructure for enterprises across Egypt.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-foreground mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Features
+                <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Enterprise Platform
                 </a>
               </li>
               <li>
-                <a href="#forecast" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Forecast
+                <a href="#forecast" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  API Access
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Testimonials
+                <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <a href="#newsletter" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Industry Reports
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Resources</h3>
+            <h3 className="font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  About Us
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Terms of Service
                 </a>
               </li>
@@ -82,7 +92,7 @@ export const Footer = () => {
                 href="#" 
                 className="w-10 h-10 rounded-full bg-muted hover:bg-accent hover:text-white transition-all flex items-center justify-center"
               >
-                <Instagram className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
@@ -99,7 +109,7 @@ export const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          © 2025 WeatherEG. Made with ❤️ in Egypt.
+          © 2025 WeatherEG. Enterprise Meteorological Solutions.
         </div>
       </div>
     </footer>

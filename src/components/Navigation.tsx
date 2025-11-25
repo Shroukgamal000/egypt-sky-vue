@@ -15,18 +15,18 @@ export const Navigation = () => {
           
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-              Features
+              Solutions
             </a>
             <a href="#forecast" className="text-muted-foreground hover:text-foreground transition-colors">
-              Forecast
+              Data Platform
             </a>
             <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
-              Testimonials
+              Clients
             </a>
           </div>
 
           <Button size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-all">
-            Get Started
+            Request Access
           </Button>
         </div>
       </div>
