@@ -1,5 +1,6 @@
 import { Cloud } from "lucide-react";
 import { Button } from "./ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navigation = () => {
   return (
@@ -25,9 +26,12 @@ export const Navigation = () => {
             </a>
           </div>
 
-          <Button size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-all">
-            Request Access
-          </Button>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Button size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-all">
+              Request Access
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

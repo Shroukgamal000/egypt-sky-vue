@@ -108,8 +108,8 @@ export const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          © 2025 WeatherEG. Enterprise Meteorological Solutions.
+        <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+          <div>© 2025 WeatherEG. Enterprise Meteorological Solutions.</div>
         </div>
       </div>
     </footer>
