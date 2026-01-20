@@ -24,13 +24,13 @@ const getWeatherIcon = (condition: string) => {
 
 export const ForecastCard = ({ day, temperature, condition }: ForecastCardProps) => {
   return (
-    <Card className="border-none shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <Card className="border-white/10 shadow-lg bg-white/5 backdrop-blur-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-white">
       <CardContent className="p-6">
         <div className="text-center">
-          <p className="text-sm font-semibold text-muted-foreground mb-3">{day}</p>
+          <p className="text-sm font-semibold text-white/60 mb-3">{day}</p>
           <div className="flex justify-center mb-3">{getWeatherIcon(condition)}</div>
-          <p className="text-2xl font-bold text-foreground mb-1">{temperature}°C</p>
-          <p className="text-sm text-muted-foreground">{condition}</p>
+          <p className="text-2xl font-bold mb-1">{temperature}°C</p>
+          <p className="text-sm text-white/60">{condition}</p>
         </div>
       </CardContent>
     </Card>

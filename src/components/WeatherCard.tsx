@@ -32,36 +32,36 @@ export const WeatherCard = ({
   windSpeed,
 }: WeatherCardProps) => {
   return (
-    <Card className="overflow-hidden border-none shadow-xl bg-card/50 backdrop-blur-sm animate-fade-in">
+    <Card className="overflow-hidden border-white/10 shadow-2xl bg-white/5 backdrop-blur-md animate-fade-in text-white">
       <CardContent className="p-8">
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold text-foreground mb-2">{city}</h2>
-          <p className="text-muted-foreground text-lg">{new Date().toLocaleDateString('en-EG', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <h2 className="text-3xl font-bold mb-2">{city}</h2>
+          <p className="text-white/60 text-lg">{new Date().toLocaleDateString('en-EG', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
 
         <div className="flex items-center justify-center mb-8">
           <div className="mr-6">{getWeatherIcon(condition)}</div>
           <div>
-            <div className="text-6xl font-bold text-foreground">
+            <div className="text-6xl font-bold">
               {temperature}°C
             </div>
-            <div className="text-xl text-muted-foreground mt-2">{condition}</div>
+            <div className="text-xl text-white/60 mt-2">{condition}</div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 pt-6 border-t border-border">
+        <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
           <div className="flex items-center">
-            <Wind className="w-5 h-5 text-primary mr-2" />
+            <Wind className="w-5 h-5 text-accent mr-2" />
             <div>
-              <p className="text-sm text-muted-foreground">Wind Speed</p>
-              <p className="text-lg font-semibold text-foreground">{windSpeed} km/h</p>
+              <p className="text-sm text-white/60">Wind Speed</p>
+              <p className="text-lg font-semibold">{windSpeed} km/h</p>
             </div>
           </div>
           <div className="flex items-center">
-            <Cloud className="w-5 h-5 text-primary mr-2" />
+            <Cloud className="w-5 h-5 text-accent mr-2" />
             <div>
-              <p className="text-sm text-muted-foreground">Humidity</p>
-              <p className="text-lg font-semibold text-foreground">{humidity}%</p>
+              <p className="text-sm text-white/60">Humidity</p>
+              <p className="text-lg font-semibold">{humidity}%</p>
             </div>
           </div>
         </div>
