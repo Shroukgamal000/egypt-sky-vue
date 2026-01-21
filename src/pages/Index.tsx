@@ -61,6 +61,7 @@ const Index = () => {
           <EgyptMap
             onCitySelect={setSelectedCity}
             selectedCity={selectedCity}
+            selectedCityTemp={currentWeather?.temperature}
           />
         </div>
 
