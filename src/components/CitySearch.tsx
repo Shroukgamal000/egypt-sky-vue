@@ -36,7 +36,7 @@ export const CitySearch = ({ onCitySelect, className }: CitySearchProps) => {
         <div className={cn("relative w-full max-w-md mx-auto z-50", className)}>
             <div className="relative">
                 <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-                    <Search className="h-5 w-5 text-white/40" />
+                    <Search className="h-5 w-5 text-foreground/40" />
                 </div>
                 <input
                     type="text"
@@ -47,12 +47,12 @@ export const CitySearch = ({ onCitySelect, className }: CitySearchProps) => {
                     }}
                     onFocus={() => setIsOpen(true)}
                     placeholder="Search for a city... (e.g. Cairo, Alexandria)"
-                    className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-12 pr-6 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all backdrop-blur-md"
+                    className="w-full bg-foreground/5 border border-foreground/10 rounded-full py-4 pl-12 pr-6 text-foreground placeholder:text-foreground/30 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all backdrop-blur-md"
                 />
             </div>
 
             {isOpen && filteredCities.length > 0 && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-[#0A0A0B]/90 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-background/90 backdrop-blur-xl border border-border rounded-2xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
                     <ul className="max-h-64 overflow-y-auto">
                         {filteredCities.map((city) => {
                             const details = CITY_COORDINATES[city];
@@ -60,12 +60,12 @@ export const CitySearch = ({ onCitySelect, className }: CitySearchProps) => {
                                 <li key={city}>
                                     <button
                                         onClick={() => handleSelect(city)}
-                                        className="w-full px-6 py-3 text-left hover:bg-white/10 transition-colors flex items-center justify-between group"
+                                        className="w-full px-6 py-3 text-left hover:bg-foreground/10 transition-colors flex items-center justify-between group"
                                     >
-                                        <span className="text-white group-hover:text-accent transition-colors font-medium">
+                                        <span className="text-foreground group-hover:text-accent transition-colors font-medium">
                                             {city}
                                         </span>
-                                        <span className="text-white/40 font-arabic text-lg">
+                                        <span className="text-foreground/40 font-arabic text-lg">
                                             {details.arabicName}
                                         </span>
                                     </button>
@@ -77,7 +77,7 @@ export const CitySearch = ({ onCitySelect, className }: CitySearchProps) => {
             )}
 
             {isOpen && query && filteredCities.length === 0 && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-[#0A0A0B]/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 text-center text-white/40 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-background/90 backdrop-blur-xl border border-border rounded-2xl p-4 text-center text-foreground/40 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
                     No cities found matching "{query}"
                 </div>
             )}

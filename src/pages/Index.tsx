@@ -3,8 +3,9 @@ import { useQuery } from "@tanstack/react-query";
 import { Navigation } from "@/components/Navigation";
 import { WeatherDashboard } from "@/components/WeatherDashboard";
 import { CitySearch } from "@/components/CitySearch";
+import { EgyptMap } from "@/components/EgyptMap";
 import { Footer } from "@/components/Footer";
-import { fetchWeather, CITY_COORDINATES } from "@/utils/weatherApi";
+import { fetchWeather } from "@/utils/weatherApi";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -40,20 +41,27 @@ const Index = () => {
   ], []);
 
   return (
-    <div className="min-h-screen bg-gradient-hero text-white">
+    <div className="min-h-screen bg-gradient-hero text-foreground">
       <Navigation />
 
       <div className="container mx-auto px-4 pt-24 pb-12 overflow-x-hidden">
         <div className="text-center mb-16 animate-fade-in text-shadow-glow">
-          <h1 className="text-7xl md:text-9xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/20 tracking-[10px] md:tracking-[20px] uppercase">
+          <h1 className="text-7xl md:text-9xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground to-foreground/20 tracking-[10px] md:tracking-[20px] uppercase">
             Aura
           </h1>
-          <p className="text-xl text-white/40 max-w-2xl mx-auto mb-12 font-medium tracking-widest uppercase">
+          <p className="text-xl text-foreground/40 max-w-2xl mx-auto mb-12 font-medium tracking-widest uppercase">
             Developed by Shrouk Gamal Kamel.
           </p>
           <div className="max-w-xl mx-auto">
             <CitySearch onCitySelect={setSelectedCity} className="mb-12" />
           </div>
+        </div>
+
+        <div className="mb-12 animate-scale-in">
+          <EgyptMap
+            onCitySelect={setSelectedCity}
+            selectedCity={selectedCity}
+          />
         </div>
 
         <div className="w-full max-w-7xl mx-auto animate-scale-in">

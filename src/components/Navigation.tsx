@@ -15,9 +15,9 @@ export const Navigation = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <span className="text-muted-foreground hover:text-white transition-colors cursor-default">Precision Maps</span>
-            <span className="text-muted-foreground hover:text-white transition-colors cursor-default">Analytics</span>
-            <span className="text-muted-foreground hover:text-white transition-colors cursor-default">Founder</span>
+            <span className="text-muted-foreground hover:text-foreground transition-colors cursor-default">Precision Maps</span>
+            <span className="text-muted-foreground hover:text-foreground transition-colors cursor-default">Analytics</span>
+            <span className="text-muted-foreground hover:text-foreground transition-colors cursor-default">Founder</span>
           </div>
 
           <div className="flex items-center gap-4">

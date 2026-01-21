@@ -10,53 +10,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
     --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 262 83% 58%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62% 30%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 224 76% 48%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 60%;
 
     --radius: 1rem;
 
-    /* Premium gradients */
+    /* Premium gradients for Light Mode */
     --gradient-warm: linear-gradient(135deg, hsl(262 83% 58%), hsl(217 91% 60%));
-    --gradient-soft: linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 15%));
-    --gradient-hero: linear-gradient(to bottom right, #0f172a, #1e1b4b, #312e81);
+    --gradient-soft: linear-gradient(180deg, hsl(210 40% 98%), hsl(210 40% 92%));
+    --gradient-hero: linear-gradient(to bottom right, #f8fafc, #e2e8f0, #cbd5e1);
 
-    /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 32% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 32% 17%;
-    --sidebar-ring: 217 91% 60%;
+    /* Glassmorphism for Light Mode */
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(0, 0, 0, 0.05);
   }
 
   .dark {
@@ -94,17 +85,9 @@ All colors MUST be HSL.
 
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
-
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 32% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 32% 17%;
-    --sidebar-ring: 217 91% 60%;
   }
 }
+
 
 @layer utilities {
   .font-arabic {
@@ -164,4 +147,32 @@ All colors MUST be HSL.
 
 .animate-sonar {
   animation: sonar 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Leaflet Custom Styles */
+.leaflet-container {
+  background: #0f172a !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply bg-background/90 backdrop-blur-md border border-white/10 text-foreground rounded-xl;
+}
+
+.leaflet-popup-tip {
+  @apply bg-background/90;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  @apply shadow-2xl;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  @apply bg-white/10 backdrop-blur-md border-white/10 text-white hover:bg-white/20 transition-colors !important;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 12px;
 }
